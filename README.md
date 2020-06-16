@@ -26,10 +26,13 @@ You should have created a Google Cloud account, installed MySQL Workbench and ma
 We are going to run a couple SQL queries and put the answers in the "Query Responses" section of this README. The query instructions are intentionally written in plain english. It's up to you to translate that in a SELECT statement.
 
 1. Select all fields from users where the city equals Chicago
+SELECT * FROM users JOIN usersaddress WHERE city = "Chicago"
 
 2. Select the "state" field for users with a first name of "Glory"
+SELECT state FROM usersaddress JOIN users WHERE first_name = "Glory"
 
 3. Select all fields from users who's phone1 starts with "773"
+SELECT * FROM users JOIN userscontact WHERE phone1 LIKE "773%"
 
 
 ## Query Responses
